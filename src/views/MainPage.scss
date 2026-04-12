@@ -1,0 +1,236 @@
+.homeBlock{
+    background-image: url("assets/images/FOND3.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.universBlock{
+    background-image: url("assets/images/UNIVERS FOND.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.otherBlock{
+    background-color: #090807;
+    color: white;
+    background-size: cover;
+    width: 100vw;
+    height: 150vh;
+}
+
+.blankBlock{
+    background-color: #090807;
+    color: white;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.precoBlock{
+    position: relative;
+    background-image: url("assets/images/preco.png");
+    background-size: cover;
+    width: 25vw;
+    height: 60vh;
+    top: 30vh;
+    left: 73vw;
+   
+    cursor: pointer;
+}
+
+.precoBlock:hover{
+    background-image: url("assets/images/preco2.png");
+}
+
+.testBottom{
+    position: absolute;
+    bottom: 10vh;
+    font-size: 30pt;
+}
+
+.letters{
+
+    width : 65%;
+    height: 80%;
+    margin-top:5%;
+}
+.bookBack{
+    color : #b80444;
+    background-image: url("assets/images/UNIVERS FOND 4 DE COUV.png");
+    background-size: cover;
+    width : 20%;
+    height: 80vh;
+    margin-top:2.5%;
+    margin-left:5%;
+    padding: 10px 40px 40px 40px;
+    font-family: Garamond;
+    font-size: 2.3vh;
+    background-position: left top;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+}
+
+.bookBack img{
+  height: 10vh;;
+}
+
+.clear{
+    clear: both;
+}
+
+.fade-in-out {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards, fade-out 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu{
+  position: fixed;
+  height: 75vh;
+  top:25vh;
+  left: 2.5vw;
+  z-index: 10000000000;
+}
+
+.mainMenu{
+  border-left: 2px dotted #c5fe01;
+  padding-left: 10px;
+  padding-bottom: 2vh;
+  margin-bottom: 1vh;
+}
+
+.couvButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu 4decouv.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.couvButton:hover{
+  background-image: url("assets/images/menu 4decouv2.png");
+}
+
+.extraitButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu extrait.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.extraitButton:hover{
+   background-image: url("assets/images/menu extrait2.png");
+}
+
+.auteurButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu auteur.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.auteurButton:hover{
+  background-image: url("assets/images/menu auteur2.png");
+}
+
+.librairieButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu librairie.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.librairieButton:hover{
+  background-image: url("assets/images/menu librairie2.png");
+}
+
+.betweenMenus{
+height: 2vh;
+  width: 2vw;
+  background-image: url(http://localhost:3004/f604c663b210e31d499f.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -0.3vw;
+  position: relative;
+}
+
+.extraMenu{
+  border-left: 5px dotted #c80931;
+  padding-left: 10px;
+  padding-top: 4vh;
+  margin-top: 1vh;
+}
+
+.mailButton{
+  cursor: pointer;
+  background-image: url("assets/images/mail.png");
+  width: 4vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mailButton:hover{
+  background-image: url("assets/images/mail2.png");
+}
+
+.youtubeButton{
+  cursor: pointer;
+  background-image: url("assets/images/youtube.png");
+  width: 4vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.youtubeButton:hover{
+  background-image: url("assets/images/youtube2.png");
+}
+
+.instaButton{
+  cursor: pointer;
+  background-image: url("assets/images/insta.png");
+  width: 4vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.instaButton:hover{
+  background-image: url("assets/images/insta2.png");
+}

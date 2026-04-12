@@ -1,0 +1,40 @@
+{
+  "name": "kali-jane",
+  "version": "1.0.0",
+  "description": "Kali-Jane website",
+  "main": "index.js",
+  "homepage": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --env development --mode development",
+    "build": "webpack --env production --mode production",
+    "build-dev": "webpack --env development --mode development"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "react": "^18.x",
+    "react-dom": "^18.x",
+    "react-icons": "^4.x",
+    "react-pageloom": "^0.1.5",
+    "react-router-dom": "^6.x",
+    "webpack": "^5.96.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^6.x",
+    "dotenv-webpack": "^8.x",
+    "html-webpack-plugin": "^4.5.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^11.x",
+    "style-loader": "^4.0.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
