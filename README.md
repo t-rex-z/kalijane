@@ -32,3 +32,9 @@ Ca devrait l'installer puis demander de get les fichiers (pull origin)
 5 - Ensuite à chauqe fois taper : npm run start
 
 6 - Le site est accessible à l'adresse : http://localhost:3004/
+
+# Faire des modifications
+
+Le code est dans src
+
+Dès que tu fait un changement et sauvegarde ça va se mettre à jour automatiquement dans le navigateur normalement.
