@@ -1,3 +1,5 @@
+
+
 .homeBlock{
     background-image: url("assets/images/FOND3.jpg");
     background-size: cover;
@@ -53,7 +55,6 @@
 }
 
 .letters{
-    font-family: Helvetica;
     width : 65%;
     height: 80%;
     margin-top:5%;
@@ -63,7 +64,7 @@
     background-image: url("assets/images/UNIVERS FOND 4 DE COUV.png");
     background-size: cover;
     width : 20%;
-    height: 80vh;
+    height: fit-content;
     margin-top:2.5%;
     margin-left:5%;
     padding: 10px 40px 40px 40px;
@@ -85,7 +86,8 @@
 
 .fade-in-out {
   opacity: 0;
-  animation: fade-in 1s ease-in forwards, fade-out 1s ease-out forwards;
+  animation: fade-in 0s linear forwards, fade-out 0s linear forwards;
+  font-family: HelveticaBlk;
 }
 
 @keyframes fade-in {

@@ -28,6 +28,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^6.x",
     "dotenv-webpack": "^8.x",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "sass": "^1.29.0",
     "sass-loader": "^11.x",

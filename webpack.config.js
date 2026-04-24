@@ -27,7 +27,7 @@ module.exports = env => {
             //your custom code to check for any exceptions
             //console.log('bypass check', {req: req, res:res, opt: opt});
             console.log("PATH IS", req.path);
-            if(req.path.indexOf('/images/') !== -1 || req.path.indexOf('/public/') !== -1 ||req.path.indexOf('.ico') !== -1){
+            if(req.path.indexOf('/images/') !== -1 || req.path.indexOf('/fonts/') !== -1 || req.path.indexOf('/public/') !== -1 ||req.path.indexOf('.ico') !== -1){
               return req.path;
                 //return '/'
             }
@@ -111,7 +111,12 @@ module.exports = env => {
         {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
             use: [
-              'file-loader'
+              {
+loader: 'file-loader',
+options: {
+name: '[name].[ext]',
+outputPath: 'fonts/'
+}}
             ],
             
         }

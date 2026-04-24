@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import withRouter from '../withRouter';
 import { PageBlock, PageWrapper, Container, PageHeader } from 'react-pageloom';
+
 import "./MainPage.scss";
+
 
 class MainPage extends Component {
   constructor(){
@@ -72,6 +74,7 @@ class MainPage extends Component {
             <span 
             className='fade-in-out'
             style={{
+                fontFamily : "HelveticaBlk",
                 float: "left",
                 position : "absolute",
                 left : word.x + "%",
