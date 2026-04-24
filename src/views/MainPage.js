@@ -123,10 +123,11 @@ class MainPage extends Component {
                             {this.createWordsAnimation()}
                         </div>
                         <div className='bookBack'>
+                            <br/>
                             <img src="assets/images/4 de couv.png"></img>
                             <p>
                              <br/>
-                        
+                            <br/>
                                 Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur. Elle voyage dans une roulotte avec son papāye, le boucher de la tribu ; ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
                                 <br/>
                                 <br/>
