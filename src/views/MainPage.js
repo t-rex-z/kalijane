@@ -14,46 +14,55 @@ class MainPage extends Component {
 
   createWordsAnimation(){
     const words = [
-        {value: "AVEC",x: 31,y: 50,size: 18,start: 2,end: 3,fontSize: "5vw",color: "#c5fd01"},  
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3.5,end: 7,fontSize: "5vw",color: "#b80444"}, 
-        {value: "SEBASTIEN",x: 25,y: 50,size: 18,start: 8,end: 10,fontSize: "5vw",color: "#c5fd01"},
-        {value: "BELLANGER",x: 25,y: 50,size: 18,start: 10,end: 12,fontSize: "5vw",color: "#b80444"},
-        {value: "ECRIT",x: 29,y: 50,size: 18,start: 13,end: 15,fontSize: "5vw",color: "#c5fd01"}, 
-        {value: "SON ALICE",x: 25,y: 50,size: 18,start: 16,end: 18,fontSize: "5vw",color: "#c5fd01"},
-        {value: "AUX POLLUANTS",x: 23,y: 50,size: 18,start: 18.5,end: 20,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ETERNELS",x: 27,y: 50,size: 18,start: 20,end: 22,fontSize: "5vw",color: "#c5fd01"},  
-        {value: "UNE",x: 34,y: 43,size: 18,start: 23,end: 24,fontSize: "5vw",color: "#b80444"}, 
-        {value: "MUTASY",x: 27,y: 50,size: 18,start: 24,end: 27,fontSize: "5vw",color: "#c5fd01"}, 
-        {value: "FANTAISIE",x: 25,y: 63,size: 18,start: 28,end: 28.5,fontSize: "5vw",color: "#c5fd01"},
-        {value: "MUTANTE",x: 27,y: 63,size: 18,start: 28.5, end: 29,fontSize: "5vw",color: "#b80444"},
-        {value: "OUI",x: 12,y: 60,size: 18,start: 29,end: 30,fontSize: "5vw",color: "#c5fd01"},
-        {value: "LES PLASTIQUES",x: 8,y: 50,size:31,start: 31,end: 33,fontSize: "5vw",color: "#b80444"},
-        {value: "EN",x: 8,y: 50,size: 18,start: 33,end: 33.25,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ONT",x: 8,y: 50,size: 18,start: 33.25,end: 33.50,fontSize: "5vw",color: "#b80444"},
-        {value: "PERTURBE",x: 8,y: 50,size: 18,start: 33.50,end: 33.75,fontSize: "5vw",color: "#c5fd01"},
-        {value: "LE RECIT",x: 8,y: 50,size: 18,start: 33.75,end: 34,fontSize: "5vw",color: "#b80444"},
-        {value: "ODYSSEE",x: 8,y: 50,size: 18,start: 36,end: 38,fontSize: "5vw",color: "#c5fd01"},
-        {value: "A HAUTEUR",x: 8,y: 50,size: 18,start: 38,end: 38.5,fontSize: "5vw",color: "#b80444"},
-        {value: "D'ENFANT",x: 8,y: 50,size: 18,start: 38.5,end: 40,fontSize: "5vw",color: "#c5fd01"},
-        {value: "CE DRAME",x: 8,y: 50,size: 18,start: 41,end: 42,fontSize: "5vw",color: "#b80444"},
-        {value: "FEROCE",x: 8,y: 50,size: 18,start: 43,end: 45,fontSize: "5vw",color: "#c5fd01"},
-        {value: "A LA CROISEE",x: 8,y: 50,size: 18,start: 45,end: 46,fontSize: "5vw",color: "#b80444"},
-        {value: "DU ROMAN",x: 8,y: 50,size: 18,start: 47,end: 48,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ET DU POEME",x: 8,y: 50,size: 18,start: 48,end: 50,fontSize: "5vw",color: "#b80444"},
-        {value: "EPIQUE",x: 8,y: 50,size: 18,start: 50,end: 53,fontSize: "5vw",color: "#c5fd01"},
-        {value: "SE DEPLOIE",x: 8,y: 50,size: 18,start: 53,end: 53.5,fontSize: "5vw",color: "#b80444"},
-        {value: "EN",x: 8,y: 50,size: 18,start: 53.5,end: 54,fontSize: "5vw",color: "#c5fd01"},
-        {value: "DIX",x: 8,y: 50,size: 18,start: 54,end: 56,fontSize: "5vw",color: "#b80444"},
-        {value: "ECLATS",x: 8,y: 50,size: 18,start: 57,end: 57.5,fontSize: "5vw",color: "#c5fd01"},
-        {value: "SENSIBLES",x: 8,y: 50,size: 18,start: 57.5,end: 59.5,fontSize: "5vw",color: "#b80444"},
-        {value: "AUSSI APPELES",x: 8,y: 50,size: 18,start: 60,end: 61,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ALLELIES",x: 8,y: 50,size: 18,start: 63,end: 66,fontSize: "5vw",color: "#b80444"},
-        {value: "CELLE",x: 8,y: 50,size: 18,start: 67,end: 68,fontSize: "5vw",color: "#c5fd01"},
-        {value: "DE",x: 8,y: 50,size: 18,start: 68,end: 68.25,fontSize: "5vw",color: "#b80444"},
-        {value: "LA",x: 8,y: 50,size: 18,start: 68.25,end: 68.50,fontSize: "5vw",color: "#c5fd01"},
-        {value: "FUGUE",x: 8,y: 50,size: 18,start: 68.50,end: 70,fontSize: "5vw",color: "#b80444"},
-        {value: "OUVRE",x: 8,y: 50,size: 18,start: 70,end: 72,fontSize: "5vw",color: "#c5fd01"},
-        {value: "L'EPOPEE",x: 27,y: 60,size: 18,start: 72,end: 76,fontSize: "5vw",color: "#b80444"}
+        {value: "AVEC",x: 31,y: 50,size: 18,start: 2,end: 2.4,fontSize: "5vw",color: "#c5fd01"},  
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 4.4,fontSize: "5vw",color: "#b80444"}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 2.6,fontSize: "5vw",color: "#b80444"}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.6,end: 3,fontSize: "5vw",color: "#b80444"}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3,end: 3.5,fontSize: "5vw",color: "#b80444"}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3.5,end: 4,fontSize: "5vw",color: "#b80444"}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 4,end: 4.4,fontSize: "5vw",color: "#b80444"}, 
+
+       
+        {value: "SEBASTIEN",x: 25,y: 50,size: 18,start: 4.4,end: 4.8,fontSize: "5vw",color: "#c5fd01"},
+        {value: "BELLANGER",x: 25,y: 50,size: 18,start: 4.8,end: 5.2,fontSize: "5vw",color: "#b80444"},
+        {value: "ECRIT",x: 29,y: 50,size: 18,start: 5.2,end: 5.6,fontSize: "5vw",color: "#c5fd01"}, 
+        {value: "SON ALICE",x: 25,y: 50,size: 18,start: 5.6,end: 6,fontSize: "5vw",color: "#b80444"},
+        {value: "AUX POLLUANTS",x: 23,y: 50,size: 18,start: 6,end: 6.4,fontSize: "5vw",color: "#c5fd01"},
+        {value: "ETERNELS",x: 27,y: 50,size: 18,start: 6.4,end: 6.8,fontSize: "5vw",color: "#b80444"},  
+    
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 6.5,end: 9,fontSize: "5vw",color: "#c5fd01"}, 
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 7,end: 8,fontSize: "5vw",color: "#c5fd01"},
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 8,end: 9,fontSize: "5vw",color: "#c5fd01"}, 
+        {value: "FANTAISIE",x: 25,y: 50,size: 18,start: 9,end: 10,fontSize: "5vw",color: "#b80444"},
+        {value: "MUTANTE",x: 27,y: 50,size: 18,start: 10, end: 10.5,fontSize: "5vw",color: "#b80444"},
+        {value: "OUI",x: 25,y: 50,size: 18,start: 10.5,end: 11,fontSize: "5vw",color: "#c5fd01"},
+        {value: "LES PLASTIQUES",x: 25,y: 50,size:31,start: 31,end: 33,fontSize: "5vw",color: "#b80444"},
+        {value: "EN",x: 25,y: 50,size: 18,start: 33,end: 33.25,fontSize: "5vw",color: "#c5fd01"},
+        {value: "ONT",x: 25,y: 50,size: 18,start: 33.25,end: 33.50,fontSize: "5vw",color: "#b80444"},
+        {value: "PERTURBE",x: 25,y: 50,size: 18,start: 33.50,end: 33.75,fontSize: "5vw",color: "#c5fd01"},
+        {value: "LE RECIT",x: 25,y: 50,size: 18,start: 33.75,end: 34,fontSize: "5vw",color: "#b80444"},
+        {value: "ODYSSEE",x: 25,y: 50,size: 18,start: 36,end: 38,fontSize: "5vw",color: "#c5fd01"},
+        {value: "A HAUTEUR",x: 25,y: 50,size: 18,start: 38,end: 38.5,fontSize: "5vw",color: "#b80444"},
+        {value: "D'ENFANT",x: 25,y: 50,size: 18,start: 38.5,end: 40,fontSize: "5vw",color: "#c5fd01"},
+        {value: "CE DRAME",x: 25,y: 50,size: 18,start: 41,end: 42,fontSize: "5vw",color: "#b80444"},
+        {value: "FEROCE",x: 25,y: 50,size: 18,start: 43,end: 45,fontSize: "5vw",color: "#c5fd01"},
+        {value: "A LA CROISEE",x: 25,y: 50,size: 18,start: 45,end: 46,fontSize: "5vw",color: "#b80444"},
+        {value: "DU ROMAN",x: 25,y: 50,size: 18,start: 47,end: 48,fontSize: "5vw",color: "#c5fd01"},
+        {value: "ET DU POEME",x: 25,y: 50,size: 18,start: 48,end: 50,fontSize: "5vw",color: "#b80444"},
+        {value: "EPIQUE",x: 25,y: 50,size: 18,start: 50,end: 53,fontSize: "5vw",color: "#c5fd01"},
+        {value: "SE DEPLOIE",x: 25,y: 50,size: 18,start: 53,end: 53.5,fontSize: "5vw",color: "#b80444"},
+        {value: "EN",x: 25,y: 50,size: 18,start: 53.5,end: 54,fontSize: "5vw",color: "#c5fd01"},
+        {value: "DIX",x: 25,y: 50,size: 18,start: 54,end: 56,fontSize: "5vw",color: "#b80444"},
+        {value: "ECLATS",x: 25,y: 50,size: 18,start: 57,end: 57.5,fontSize: "5vw",color: "#c5fd01"},
+        {value: "SENSIBLES",x: 25,y: 50,size: 18,start: 57.5,end: 59.5,fontSize: "5vw",color: "#b80444"},
+        {value: "AUSSI APPELES",x: 25,y: 50,size: 18,start: 60,end: 61,fontSize: "5vw",color: "#c5fd01"},
+        {value: "ALLELIES",x: 25,y: 50,size: 18,start: 63,end: 66,fontSize: "5vw",color: "#b80444"},
+        {value: "CELLE",x: 25,y: 50,size: 18,start: 67,end: 68,fontSize: "5vw",color: "#c5fd01"},
+        {value: "DE",x: 25,y: 50,size: 18,start: 68,end: 68.25,fontSize: "5vw",color: "#b80444"},
+        {value: "LA",x: 25,y: 50,size: 18,start: 68.25,end: 68.50,fontSize: "5vw",color: "#c5fd01"},
+        {value: "FUGUE",x: 25,y: 50,size: 18,start: 68.50,end: 70,fontSize: "5vw",color: "#b80444"},
+        {value: "OUVRE",x: 25,y: 50,size: 18,start: 70,end: 72,fontSize: "5vw",color: "#c5fd01"},
+        {value: "L'EPOPEE",x: 25,y: 60,size: 18,start: 72,end: 76,fontSize: "5vw",color: "#b80444"}
     ];
 
     let result = [];
@@ -116,6 +125,8 @@ class MainPage extends Component {
                         <div className='bookBack'>
                             <img src="assets/images/4 de couv.png"></img>
                             <p>
+                             <br/>
+                        
                                 Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur. Elle voyage dans une roulotte avec son papāye, le boucher de la tribu ; ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
                                 <br/>
                                 <br/>
