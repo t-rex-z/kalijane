@@ -3,18 +3,27 @@ import withRouter from '../withRouter';
 import { PageBlock, PageWrapper, Container, PageHeader } from 'react-pageloom';
 
 import "./MainPage.scss";
+import { useInView, useOnInView } from 'react-intersection-observer';
 
 
-class MainPage extends Component {
-  constructor(){
-    console.log("OK")
-    super();
+export default function MainPage(){
+const trackingRef = useOnInView(
+    (inView, entry) => {
+      if (inView) {
+        // Element is in view - perhaps log an impression
+        console.log("Element appeared in view", entry.target);
+      } else {
+        console.log("Element left view", entry.target);
+      }
+    },
+    {
+      /* Optional options */
+      threshold: 0.5,
+      triggerOnce: false,
+    },
+  );
 
-    this.state = {
-    };
-  }
-
-  createWordsAnimation(){
+  const createWordsAnimation = ()=>{
     const words = [
         {value: "AVEC",x: 31,y: 50,size: 18,start: 2,end: 2.4,fontSize: "5vw",color: "#c5fd01"},  
         {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 4.4,fontSize: "5vw",color: "#b80444"}, 
@@ -74,7 +83,6 @@ class MainPage extends Component {
             <span 
             className='fade-in-out testFont'
             style={{
-                //fontFamily : "HelveticaBlk",
                 float: "left",
                 position : "absolute",
                 left : word.x + "%",
@@ -93,7 +101,6 @@ class MainPage extends Component {
     return result;
   }
 
-  render(){
     return (
         <>
             <div className='menu'>
@@ -110,8 +117,8 @@ class MainPage extends Component {
                     <div className='youtubeButton'></div>
                 </div>
             </div>
-            <PageWrapper snapScroll>
-                <PageBlock>
+            <PageWrapper snapScroll onScrollEndCapture={() => {console.log("SCROLL 1")}}>
+                <PageBlock >
                     <div className="homeBlock">
                         <div className='precoBlock'>
 
@@ -121,9 +128,9 @@ class MainPage extends Component {
 
                 </PageBlock>
                 <PageBlock>
-                    <div className='universBlock'>
+                    <div className='universBlock' ref={trackingRef}>
                         <div className='letters'>
-                            {this.createWordsAnimation()}
+                            {createWordsAnimation()}
                         </div>
                         <div className='bookBack'>
                             <br/>
@@ -219,7 +226,4 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
             </PageWrapper>
         </>
     )
-  }
 }
-
-export default withRouter(MainPage);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Routes, HashRouter } from 'react-router-dom';
-import MainPage from './MainPage';
+import  MainPage from './MainPage';
 
 class App extends Component {
   constructor(){
