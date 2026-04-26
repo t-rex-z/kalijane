@@ -1,5 +1,4 @@
 import React from 'react';
-import "./fonts/Helvetica/HelveticaBlk.ttf";
 import './index.css';
 import App from './views/App';
 import * as serviceWorker from './serviceWorker';

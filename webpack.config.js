@@ -2,9 +2,19 @@ const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = env => {
   console.log(JSON.stringify(env));
+  
+  const baseUrl = 'http://localhost:3004'
+
+  const injectBaseUrl = input => {
+    return input
+        .toString()
+        .replace(/{{baseUrl}}/g, baseUrl);
+  }
+
   return {
     mode: 'development',
     entry: './src/index.js',
@@ -27,7 +37,7 @@ module.exports = env => {
             //your custom code to check for any exceptions
             //console.log('bypass check', {req: req, res:res, opt: opt});
             console.log("PATH IS", req.path);
-            if(req.path.indexOf('/images/') !== -1 || req.path.indexOf('/fonts/') !== -1 || req.path.indexOf('/public/') !== -1 ||req.path.indexOf('.ico') !== -1){
+            if(req.path.indexOf('/styles/') !== -1 ||req.path.indexOf('/images/') !== -1 || req.path.indexOf('/fonts/') !== -1 || req.path.indexOf('/public/') !== -1 ||req.path.indexOf('.ico') !== -1){
               return req.path;
                 //return '/'
             }
@@ -115,7 +125,7 @@ module.exports = env => {
 loader: 'file-loader',
 options: {
 name: '[name].[ext]',
-outputPath: 'fonts/'
+outputPath: 'assets/fonts/'
 }}
             ],
             
@@ -126,6 +136,12 @@ outputPath: 'fonts/'
         new Dotenv({
           path: './.env.' + (env.development ? "development" : "production"),
           safe: false
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: "public/assets/styles", to: "assets/styles", transform: injectBaseUrl  },
+          { from: "public/assets/fonts", to: "assets/fonts" },
+        ]
       }),
       new HtmlWebpackPlugin({
         title: 'Custom template',

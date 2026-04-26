@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'HelveticaBlk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/helvetica-black-regular.ttf) format('truetype');
+}
+
+.testFont{
+    font-family: 'HelveticaBlk';
+}

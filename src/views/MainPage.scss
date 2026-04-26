@@ -87,7 +87,7 @@
 .fade-in-out {
   opacity: 0;
   animation: fade-in 0s linear forwards, fade-out 0s linear forwards;
-  font-family: HelveticaBlk;
+  //font-family: "HelveticaBlk";
 }
 
 @keyframes fade-in {

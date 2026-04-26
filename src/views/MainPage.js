@@ -72,9 +72,9 @@ class MainPage extends Component {
         const word = words[i];
         result.push(
             <span 
-            className='fade-in-out'
+            className='fade-in-out testFont'
             style={{
-                fontFamily : "HelveticaBlk",
+                //fontFamily : "HelveticaBlk",
                 float: "left",
                 position : "absolute",
                 left : word.x + "%",
