@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useRef, useState } from 'react';
 import withRouter from '../withRouter';
 import { PageBlock, PageWrapper, Container, PageHeader } from 'react-pageloom';
 
@@ -7,13 +7,20 @@ import { useInView, useOnInView } from 'react-intersection-observer';
 
 
 export default function MainPage(){
+    const [words, setWords] = useState([]);
+
 const trackingRef = useOnInView(
     (inView, entry) => {
       if (inView) {
         // Element is in view - perhaps log an impression
         console.log("Element appeared in view", entry.target);
+         const now = Date.now();
+        Ref.current = setInterval(() => {
+            startTimer(now);
+        }, 200)
       } else {
         console.log("Element left view", entry.target);
+        clearInterval(Ref.current);
       }
     },
     {
@@ -23,74 +30,110 @@ const trackingRef = useOnInView(
     },
   );
 
-  const createWordsAnimation = ()=>{
-    const words = [
-        {value: "AVEC",x: 31,y: 50,size: 18,start: 2,end: 2.4,fontSize: "5vw",color: "#c5fd01"},  
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 4.4,fontSize: "5vw",color: "#b80444"}, 
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 2.6,fontSize: "5vw",color: "#b80444"}, 
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.6,end: 3,fontSize: "5vw",color: "#b80444"}, 
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3,end: 3.5,fontSize: "5vw",color: "#b80444"}, 
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3.5,end: 4,fontSize: "5vw",color: "#b80444"}, 
-        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 4,end: 4.4,fontSize: "5vw",color: "#b80444"}, 
+  useEffect(()=> {
+    setDefaultWords();
+  },[])
 
-       
-        {value: "SEBASTIEN",x: 25,y: 50,size: 18,start: 4.4,end: 4.8,fontSize: "5vw",color: "#c5fd01"},
-        {value: "BELLANGER",x: 25,y: 50,size: 18,start: 4.8,end: 5.2,fontSize: "5vw",color: "#b80444"},
-        {value: "ECRIT",x: 29,y: 50,size: 18,start: 5.2,end: 5.6,fontSize: "5vw",color: "#c5fd01"}, 
-        {value: "SON ALICE",x: 25,y: 50,size: 18,start: 5.6,end: 6,fontSize: "5vw",color: "#b80444"},
-        {value: "AUX POLLUANTS",x: 23,y: 50,size: 18,start: 6,end: 6.4,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ETERNELS",x: 27,y: 50,size: 18,start: 6.4,end: 6.8,fontSize: "5vw",color: "#b80444"},  
+
+const Ref = useRef(null);  
+
+  const setDefaultWords = ()=>{
+    let defaultWords = [
+        {value: "AVEC",x: 31,y: 50,size: 18,start: 2,end: 2.4,fontSize: "5vw",color: "#c5fd01", opacity : 0},  
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 4.4,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.2,end: 2.6,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 2.6,end: 3,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3,end: 3.5,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 3.5,end: 4,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+        {value: "KALI-JANE",x: 25,y: 50,size: 18,start: 4,end: 4.4,fontSize: "5vw",color: "#b80444", opacity : 0}, 
+
+        {value: "SEBASTIEN",x: 25,y: 50,size: 18,start: 4.4,end: 4.8,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "BELLANGER",x: 25,y: 50,size: 18,start: 4.8,end: 5.2,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "ECRIT",x: 29,y: 50,size: 18,start: 5.2,end: 5.6,fontSize: "5vw",color: "#c5fd01", opacity : 0}, 
+        {value: "SON ALICE",x: 25,y: 50,size: 18,start: 5.6,end: 6,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "AUX POLLUANTS",x: 23,y: 50,size: 18,start: 6,end: 6.4,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "ETERNELS",x: 27,y: 50,size: 18,start: 6.4,end: 6.8,fontSize: "5vw",color: "#b80444", opacity : 0},  
     
-        {value: "MUTASY",x: 27,y: 50,size: 18,start: 6.5,end: 9,fontSize: "5vw",color: "#c5fd01"}, 
-        {value: "MUTASY",x: 27,y: 50,size: 18,start: 7,end: 8,fontSize: "5vw",color: "#c5fd01"},
-        {value: "MUTASY",x: 27,y: 50,size: 18,start: 8,end: 9,fontSize: "5vw",color: "#c5fd01"}, 
-        {value: "FANTAISIE",x: 25,y: 50,size: 18,start: 9,end: 10,fontSize: "5vw",color: "#b80444"},
-        {value: "MUTANTE",x: 27,y: 50,size: 18,start: 10, end: 10.5,fontSize: "5vw",color: "#b80444"},
-        {value: "OUI",x: 25,y: 50,size: 18,start: 10.5,end: 11,fontSize: "5vw",color: "#c5fd01"},
-        {value: "LES PLASTIQUES",x: 25,y: 50,size:31,start: 31,end: 33,fontSize: "5vw",color: "#b80444"},
-        {value: "EN",x: 25,y: 50,size: 18,start: 33,end: 33.25,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ONT",x: 25,y: 50,size: 18,start: 33.25,end: 33.50,fontSize: "5vw",color: "#b80444"},
-        {value: "PERTURBE",x: 25,y: 50,size: 18,start: 33.50,end: 33.75,fontSize: "5vw",color: "#c5fd01"},
-        {value: "LE RECIT",x: 25,y: 50,size: 18,start: 33.75,end: 34,fontSize: "5vw",color: "#b80444"},
-        {value: "ODYSSEE",x: 25,y: 50,size: 18,start: 36,end: 38,fontSize: "5vw",color: "#c5fd01"},
-        {value: "A HAUTEUR",x: 25,y: 50,size: 18,start: 38,end: 38.5,fontSize: "5vw",color: "#b80444"},
-        {value: "D'ENFANT",x: 25,y: 50,size: 18,start: 38.5,end: 40,fontSize: "5vw",color: "#c5fd01"},
-        {value: "CE DRAME",x: 25,y: 50,size: 18,start: 41,end: 42,fontSize: "5vw",color: "#b80444"},
-        {value: "FEROCE",x: 25,y: 50,size: 18,start: 43,end: 45,fontSize: "5vw",color: "#c5fd01"},
-        {value: "A LA CROISEE",x: 25,y: 50,size: 18,start: 45,end: 46,fontSize: "5vw",color: "#b80444"},
-        {value: "DU ROMAN",x: 25,y: 50,size: 18,start: 47,end: 48,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ET DU POEME",x: 25,y: 50,size: 18,start: 48,end: 50,fontSize: "5vw",color: "#b80444"},
-        {value: "EPIQUE",x: 25,y: 50,size: 18,start: 50,end: 53,fontSize: "5vw",color: "#c5fd01"},
-        {value: "SE DEPLOIE",x: 25,y: 50,size: 18,start: 53,end: 53.5,fontSize: "5vw",color: "#b80444"},
-        {value: "EN",x: 25,y: 50,size: 18,start: 53.5,end: 54,fontSize: "5vw",color: "#c5fd01"},
-        {value: "DIX",x: 25,y: 50,size: 18,start: 54,end: 56,fontSize: "5vw",color: "#b80444"},
-        {value: "ECLATS",x: 25,y: 50,size: 18,start: 57,end: 57.5,fontSize: "5vw",color: "#c5fd01"},
-        {value: "SENSIBLES",x: 25,y: 50,size: 18,start: 57.5,end: 59.5,fontSize: "5vw",color: "#b80444"},
-        {value: "AUSSI APPELES",x: 25,y: 50,size: 18,start: 60,end: 61,fontSize: "5vw",color: "#c5fd01"},
-        {value: "ALLELIES",x: 25,y: 50,size: 18,start: 63,end: 66,fontSize: "5vw",color: "#b80444"},
-        {value: "CELLE",x: 25,y: 50,size: 18,start: 67,end: 68,fontSize: "5vw",color: "#c5fd01"},
-        {value: "DE",x: 25,y: 50,size: 18,start: 68,end: 68.25,fontSize: "5vw",color: "#b80444"},
-        {value: "LA",x: 25,y: 50,size: 18,start: 68.25,end: 68.50,fontSize: "5vw",color: "#c5fd01"},
-        {value: "FUGUE",x: 25,y: 50,size: 18,start: 68.50,end: 70,fontSize: "5vw",color: "#b80444"},
-        {value: "OUVRE",x: 25,y: 50,size: 18,start: 70,end: 72,fontSize: "5vw",color: "#c5fd01"},
-        {value: "L'EPOPEE",x: 25,y: 60,size: 18,start: 72,end: 76,fontSize: "5vw",color: "#b80444"}
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 6.5,end: 9,fontSize: "5vw",color: "#c5fd01", opacity : 0}, 
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 7,end: 8,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "MUTASY",x: 27,y: 50,size: 18,start: 8,end: 9,fontSize: "5vw",color: "#c5fd01", opacity : 0}, 
+        {value: "FANTAISIE",x: 25,y: 50,size: 18,start: 9,end: 10,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "MUTANTE",x: 27,y: 50,size: 18,start: 10, end: 10.5,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "OUI",x: 25,y: 50,size: 18,start: 10.5,end: 11,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "LES PLASTIQUES",x: 25,y: 50,size:31,start: 31,end: 33,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "EN",x: 25,y: 50,size: 18,start: 33,end: 33.25,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "ONT",x: 25,y: 50,size: 18,start: 33.25,end: 33.50,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "PERTURBE",x: 25,y: 50,size: 18,start: 33.50,end: 33.75,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "LE RECIT",x: 25,y: 50,size: 18,start: 33.75,end: 34,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "ODYSSEE",x: 25,y: 50,size: 18,start: 36,end: 38,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "A HAUTEUR",x: 25,y: 50,size: 18,start: 38,end: 38.5,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "D'ENFANT",x: 25,y: 50,size: 18,start: 38.5,end: 40,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "CE DRAME",x: 25,y: 50,size: 18,start: 41,end: 42,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "FEROCE",x: 25,y: 50,size: 18,start: 43,end: 45,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "A LA CROISEE",x: 25,y: 50,size: 18,start: 45,end: 46,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "DU ROMAN",x: 25,y: 50,size: 18,start: 47,end: 48,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "ET DU POEME",x: 25,y: 50,size: 18,start: 48,end: 50,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "EPIQUE",x: 25,y: 50,size: 18,start: 50,end: 53,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "SE DEPLOIE",x: 25,y: 50,size: 18,start: 53,end: 53.5,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "EN",x: 25,y: 50,size: 18,start: 53.5,end: 54,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "DIX",x: 25,y: 50,size: 18,start: 54,end: 56,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "ECLATS",x: 25,y: 50,size: 18,start: 57,end: 57.5,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "SENSIBLES",x: 25,y: 50,size: 18,start: 57.5,end: 59.5,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "AUSSI APPELES",x: 25,y: 50,size: 18,start: 60,end: 61,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "ALLELIES",x: 25,y: 50,size: 18,start: 63,end: 66,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "CELLE",x: 25,y: 50,size: 18,start: 67,end: 68,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "DE",x: 25,y: 50,size: 18,start: 68,end: 68.25,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "LA",x: 25,y: 50,size: 18,start: 68.25,end: 68.50,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "FUGUE",x: 25,y: 50,size: 18,start: 68.50,end: 70,fontSize: "5vw",color: "#b80444", opacity : 0},
+        {value: "OUVRE",x: 25,y: 50,size: 18,start: 70,end: 72,fontSize: "5vw",color: "#c5fd01", opacity : 0},
+        {value: "L'EPOPEE",x: 25,y: 60,size: 18,start: 72,end: 76,fontSize: "5vw",color: "#b80444", opacity : 0}
     ];
 
+    setWords(defaultWords);
+  }
+
+  
+
+  const startTimer = (startTime) => {
+    let updatedWords = [...words];
+    const timeElapsed = (Date.now() - startTime) / 1000;
+    let hasChanged = false;
+
+    for(let i = 0; i < updatedWords.length; ++i){
+        
+        let word = updatedWords[i];
+        if(word.end < timeElapsed && word.opacity > 0){
+            word.opacity = 0;
+            hasChanged = true;
+        }
+        else if(word.start <= timeElapsed && word.end >= timeElapsed && word.opacity == 0){
+            console.log("MATCH FOR ", word)
+            word.opacity = 100;
+            hasChanged = true;
+        }
+    }
+
+    if(hasChanged){
+        setWords(updatedWords);
+    }
+    
+  }
+
+  const getWords = ()=>{
     let result = [];
     for(let i = 0; i < words.length; ++i){
         const word = words[i];
         result.push(
             <span 
-            className='fade-in-out testFont'
+            className='testFont'
+            key={i}
             style={{
                 float: "left",
                 position : "absolute",
                 left : word.x + "%",
                 top : word.y + "%",
                 fontSize : word.fontSize,
-                opacity: 0,
-                animationDelay : `${word.start}s`,
-                animationDuration : `${word.end - word.start}s`,
+                opacity: word.opacity,
                 color : word.color
             }}>
                 {word.value}
@@ -130,7 +173,7 @@ const trackingRef = useOnInView(
                 <PageBlock>
                     <div className='universBlock' ref={trackingRef}>
                         <div className='letters'>
-                            {createWordsAnimation()}
+                            {getWords()}
                         </div>
                         <div className='bookBack'>
                             <br/>
