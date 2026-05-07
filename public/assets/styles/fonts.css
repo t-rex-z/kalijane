@@ -7,6 +7,19 @@
     src: url(/assets/fonts/helvetica-black-regular.ttf) format('truetype');
 }
 
-.testFont{
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap') format('truetype');
+}
+
+.wordFont{
     font-family: 'HelveticaBlk';
+}
+
+.bookFont{
+    font-family: 'Merriweather';
+    color: #f3e9e8;
 }

@@ -135,7 +135,7 @@ const Ref = useRef(null);
         const word = words[i];
         result.push(
             <span 
-            className='testFont'
+            className='wordFont'
             key={i}
             style={{
                 float: "left",
@@ -188,7 +188,7 @@ const Ref = useRef(null);
                         <div className='bookBack'>
                             <br/>
                             <img src="assets/images/4 de couv.png"></img>
-                            <p>
+                            <p className='bookFont'>
                              <br/>
                             <br/>
                                 Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur. Elle voyage dans une roulotte avec son papāye, le boucher de la tribu ; ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
