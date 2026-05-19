@@ -191,13 +191,19 @@ const Ref = useRef(null);
                             <p className='bookFont'>
                              <br/>
                             <br/>
-                                Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur. Elle voyage dans une roulotte avec son papāye, le boucher de la tribu ; ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
+                                Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur.
+                                <br/>
+                                <br/>
+                                Elle voyage dans une roulotte avec son papāye, le boucher de la tribu. Ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
                                 <br/>
                                 <br/>
                                 Aujourd’hui, les deux nomades ont pris du retard sur le reste de la caravane ; c’est la nuit et Kali-Jane ne dort pas. Elle fugue.
                                 <br/>
                                 <br/>
-                                L’enfant part sauver sa Dame, une biche au sang de dragon. Elle lui a juré qu’elle ne serait pas abattue. Elle rêve de la voir guérir, c’est pour ça qu’elle l’emmène voir la Méditerranée. Mais la biche n’est pas malade, l’animale est enceinte et s’est livrée au boucher pour son accouchement prochain.
+                                L’enfant part sauver sa Dame, une biche au sang de dragon. Elle lui a juré qu’elle ne serait pas abattue. Elle rêve de la voir guérir. Peut-être que si elles arrivent à la mer ?
+                                <br/>
+                                <br/>
+                                Mais la biche n’est pas malade, l’animale est enceinte et s’est livrée au boucher pour son accouchement prochain.
                                 <br/>
                                 <br/>
                                 Enceinte comme les femmes de jadis.
