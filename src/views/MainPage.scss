@@ -68,8 +68,7 @@
     margin-top:2.5%;
     margin-left:5%;
     padding: 10px 40px 40px 40px;
-    font-family: Garamond;
-    font-size: 2.3vh;
+    font-size: 2.1vh;
     background-position: left top;
     border-radius: 30px;
     background-repeat: no-repeat;
@@ -133,6 +132,16 @@
   margin-bottom: 2vh;
 }
 
+.couvButtonSelected{
+  cursor: pointer;
+  background-image: url("assets/images/menu 4decouv2.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
 .couvButton:hover{
   background-image: url("assets/images/menu 4decouv2.png");
 }
@@ -140,6 +149,16 @@
 .extraitButton{
   cursor: pointer;
   background-image: url("assets/images/menu extrait.png");
+  width: 9vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.extraitButtonSelected{
+  cursor: pointer;
+  background-image: url("assets/images/menu extrait2.png");
   width: 9vw;
   height: 9vh;
   background-size: contain;
@@ -236,4 +255,89 @@ height: 2vh;
 
 .instaButton:hover{
   background-image: url("assets/images/insta2.png");
+}
+
+.extraitBlock{
+    background-color: #18160d;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.extraitLeft{
+  margin-left: 25vw;
+  width: 30vw;
+  height: 80vh;
+}
+
+.extraitRight{
+  margin-left: 2vw;
+  width: 30vw;
+  height: 80vh;
+}
+
+#extrait1L{
+   background-image: url("assets/images/extraits/page1.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+}
+
+#extrait1R{
+  background-image: url("assets/images/extraits/page2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+#extrait2L{
+   background-image: url("assets/images/extraits/page3.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+}
+
+#extrait2R{
+  background-image: url("assets/images/extraits/page4.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+#extrait3L{
+   background-image: url("assets/images/extraits/page5.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+}
+
+#extrait3R{
+  background-image: url("assets/images/extraits/page6.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+#extrait4L{
+   background-image: url("assets/images/extraits/page7.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+}
+
+#extrait4R{
+  background-image: url("assets/images/extraits/page8.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
