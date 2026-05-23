@@ -243,7 +243,7 @@ export default function MainPage(){
                                 Aujourd’hui, les deux nomades ont pris du retard sur le reste de la caravane ; c’est la nuit et Kali-Jane ne dort pas. Elle fugue.
                                 <br/>
                                 <br/>
-                                L’enfant part sauver sa Dame, une biche au sang de dragon. Elle lui a juré qu’elle ne serait pas abattue. Elle rêve de la voir guérir. C'est pour ça qu'elle l'emmène voir la mer Méditerranée.
+                                L’enfant part sauver sa Dame, une biche au sang de dragon. Elle lui a juré qu’elle ne serait pas abattue. Elle rêve de la voir guérir. Alors peut-être qu'à la mer...
                                 <br/>
                                 <br/>
                                 Mais la biche n’est pas malade, l’animale est enceinte et s’est livrée au boucher pour son accouchement prochain.
