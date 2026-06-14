@@ -12,7 +12,8 @@ export default function MainPage(){
 
     const UniversBlockRef = useRef(null);
     const CouvScrollRef = useRef(null);
-    const ExtraitsScrollRef = useRef(null); 
+    const ExtraitsScrollRef = useRef(null);
+    const LibrairieScrollRef = useRef(null);
 
     const CbUniversBlockTrackingRef = useOnInView(
         (inView, entry) => {
@@ -56,6 +57,19 @@ export default function MainPage(){
         },
     );
 
+    const CbLibrairieBlockTrackingRef = useOnInView(
+        (inView, entry) => {
+            if (inView) {
+                setCurrentPage("librairie");
+            }
+        },
+        {
+        /* Optional options */
+        threshold: 0.5,
+        triggerOnce: false,
+        },
+    );
+
     const CbHomeBlockTrackingRef = useOnInView(
         (inView, entry) => {
             if (inView) {
@@ -71,6 +85,7 @@ export default function MainPage(){
 
     useEffect(()=> {
         setDefaultWords();
+
     },[])
 
 
@@ -198,14 +213,15 @@ export default function MainPage(){
         return result;
     }
 
+    console.log("INNER HEIGHT", window.innerHeight)
+
     return (
         <>
             <div className='menu'>
                 <div className='mainMenu'>
                     <div className={`couvButton${(currentPage == "couv" ? "Selected" : "")}`} onClick={()=> {CouvScrollRef.current.scrollIntoView({ behavior: 'smooth' });}}></div>
                     <div id='extraitButton' className={`extraitButton${(currentPage == "extraits" ? "Selected" : "")}`} onClick={()=> {ExtraitsScrollRef.current.scrollIntoView({ behavior: 'smooth' });}}></div>
-                    <div className='auteurButton'></div>
-                    <div className='librairieButton'></div>
+                    <div id="librairieButton" className={`librairieButton${(currentPage == "librairie" ? "Selected" : "")}`} onClick={()=> {LibrairieScrollRef.current.scrollIntoView({ behavior: 'smooth' });}}></div>
                 </div>
                 <div className='betweenMenus'></div>
                 <div className='extraMenu'>
@@ -303,6 +319,42 @@ export default function MainPage(){
                             <div id="extrait4R"></div>
                         </div>
                     </div>
+                    </Container>
+                </PageBlock>
+                <PageBlock ref={LibrairieScrollRef}>
+                    <Container>
+                        <div className='librairieBlock' ref={CbLibrairieBlockTrackingRef}>
+                            <div id="librairieHead">
+                                <div id='signature' style={{height: '100%', width : Math.trunc(window.outerHeight * 35 / 100) + "px"}}>
+                                    <div id="sigPicture"></div>
+                                </div>
+                                <div id='author'>
+                                    <div id="authorPhoto">
+                                        <div id='authorBackground'></div>
+                                        <div id='authorPicture'></div>
+                                        <div className='clear'></div>
+                                    </div>
+                                    <div id='authorName'></div>
+                                    <div id="authorText">
+                                        <p className='authorFont'>
+                                            Bonjour à tous ! Je ne vous ai pas dit : à 5 ans, j’adorais jouer de la batterie avec mon bâton et les poubelles de la cour. Cela faisait un boucan de fou ! Je ne sais plus très bien si j’étais super heureux ou super énervé, mais j’ai le souvenir de purs moments artistiques !
+                                            <br/>
+                                            <br/>
+                                            Pourquoi je vous raconte ça ? Parce que Kali-Jane braille fort et réagit n’importe comment parfois, je sais bien, elle saoule... Mais ne lui en voulez pas, en tout cas pas trop, c’est pas sa faute ! Dès que j’écris son histoire, voilà, j’avoue, ça me rattrape, je sens compulsivement vibrer les poubelles sur les touches de clavier.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="librairieBody">
+                                <div id="librairieBackground">
+                                    <div style={{height: '80%', width : Math.trunc(window.outerHeight * 35 / 100) + "px"}}></div>
+                                    <div className='librairieLivres' style={{height: '80%'}}>
+                                        TEST
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </Container>
                 </PageBlock>
             </PageWrapper>
