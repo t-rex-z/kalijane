@@ -448,8 +448,49 @@ height: 90%;
 }
 
 .librairieLivres{
-  border-left: 2px dotted #c5fe01;
+ // border-left: 2px dotted #c5fe01;
   margin-top: 5px;
+  display: flex;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.librairieItem{
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  padding: 5px;
+  color: white;
+  gap: 5px;
+  align-items: center;
+}
+
+.itemSeparator{
+border-bottom: 1.5px dotted #c5fe01;
+width: 30%;
+}
+
+.tome1{
+height: 65%;
+  width: 100%;
+  margin-left: 5%;
+  background-image: url("assets/images/librairie/librairie tome 1 mini couv.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: bottom;
+    cursor: pointer;
+    transition: .5s;
+  transform: scale(1);
+}
+
+.tome1:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.tome1:hover{
+   box-shadow: 0 0 10px #ffee10;
+   text-shadow: 0 0 10px #ffee10;
 }
 
 #librairieBackground{

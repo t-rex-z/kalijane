@@ -349,7 +349,15 @@ export default function MainPage(){
                                 <div id="librairieBackground">
                                     <div style={{height: '80%', width : Math.trunc(window.outerHeight * 35 / 100) + "px"}}></div>
                                     <div className='librairieLivres' style={{height: '80%'}}>
-                                        TEST
+                                        <div className='librairieItem'>
+                                            <div className="tome1"></div>
+                                            <div className='itemSeparator'></div>
+                                            <p>
+                                                Kali-Jane - tome 1
+                                                <br/>
+                                                Alélie de la fugue
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
