@@ -359,6 +359,10 @@ export default function MainPage(){
                                             </p>
                                         </div>
                                     </div>
+                                  
+                                </div>
+                                <div className='precoBig'>
+                                    <span>PRECOMMANDES</span>
                                 </div>
                             </div>
                             

@@ -68,7 +68,8 @@
     margin-top:2.5%;
     margin-left:5%;
     padding: 10px 40px 40px 40px;
-    font-size: 2.1vh;
+    font-size: 1.6vh;
+    line-height: 2.2vh;
     background-position: left top;
     border-radius: 30px;
     background-repeat: no-repeat;
@@ -274,24 +275,26 @@ height: 2vh;
     height: 100vh;
     display: flex;
     align-items: center;
+   
 }
 
 .extraitLeft{
-  margin-left: 25vw;
-  width: 30vw;
-  height: 80vh;
+  margin-left: 16vw;
+  width: 40vw;
+  height: 95vh;
 }
 
 .extraitRight{
   margin-left: 2vw;
-  width: 30vw;
-  height: 80vh;
+  width: 40vw;
+  height: 95vh;
 }
 
 #extrait1L{
    background-image: url("assets/images/extraits/page1.jpg");
    background-size: contain;
    background-repeat: no-repeat;
+   background-position-y: center;
    width: 100%;
    height: 100%;
 }
@@ -300,6 +303,7 @@ height: 2vh;
   background-image: url("assets/images/extraits/page2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
   width: 100%;
   height: 100%;
 }
@@ -308,6 +312,7 @@ height: 2vh;
    background-image: url("assets/images/extraits/page3.jpg");
    background-size: contain;
    background-repeat: no-repeat;
+   background-position-y: center;
    width: 100%;
    height: 100%;
 }
@@ -316,6 +321,7 @@ height: 2vh;
   background-image: url("assets/images/extraits/page4.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
   width: 100%;
   height: 100%;
 }
@@ -324,6 +330,7 @@ height: 2vh;
    background-image: url("assets/images/extraits/page5.jpg");
    background-size: contain;
    background-repeat: no-repeat;
+   background-position-y: center;
    width: 100%;
    height: 100%;
 }
@@ -332,6 +339,7 @@ height: 2vh;
   background-image: url("assets/images/extraits/page6.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
   width: 100%;
   height: 100%;
 }
@@ -340,6 +348,7 @@ height: 2vh;
    background-image: url("assets/images/extraits/page7.jpg");
    background-size: contain;
    background-repeat: no-repeat;
+   background-position-y: center;
    width: 100%;
    height: 100%;
 }
@@ -348,6 +357,7 @@ height: 2vh;
   background-image: url("assets/images/extraits/page8.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
   width: 100%;
   height: 100%;
 }
@@ -500,4 +510,17 @@ height: 65%;
   background-position: bottom;
   background-repeat: no-repeat;
   background-image: url("assets/images/librairie/bandeau-bas.png");
+}
+
+.precoBig{
+  float: left;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  font-size: 9vh;
+  color: #c5fe01;
+  z-index: 9999999;
+  font-family: 'HelveticaBlk';
+  padding: 0;
+  margin: 0;
 }
