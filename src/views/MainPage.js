@@ -325,7 +325,7 @@ export default function MainPage(){
                     <Container>
                         <div className='librairieBlock' ref={CbLibrairieBlockTrackingRef}>
                             <div id="librairieHead">
-                                <div id='signature' style={{height: '100%', width : Math.trunc(window.outerHeight * 35 / 100) + "px"}}>
+                                <div id='signature' style={{height: '100%', width : Math.trunc(document.documentElement.clientHeight * 35 / 100) + "px"}}>
                                     <div id="sigPicture"></div>
                                 </div>
                                 <div id='author'>
@@ -347,7 +347,7 @@ export default function MainPage(){
                             </div>
                             <div id="librairieBody">
                                 <div id="librairieBackground">
-                                    <div style={{height: '80%', width : Math.trunc(window.outerHeight * 35 / 100) + "px"}}></div>
+                                    <div style={{height: '80%', width : Math.trunc(document.documentElement.clientHeight* 35 / 100) + "px"}}></div>
                                     <div className='librairieLivres' style={{height: '80%'}}>
                                         <div className='librairieItem'>
                                             <div className="tome1"></div>
@@ -355,7 +355,7 @@ export default function MainPage(){
                                             <p>
                                                 Kali-Jane - tome 1
                                                 <br/>
-                                                Alélie de la fugue
+                                                Allèlie de la fugue
                                             </p>
                                         </div>
                                     </div>
