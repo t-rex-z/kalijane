@@ -227,7 +227,7 @@ export default function MainPage(){
                 <div className='extraMenu'>
                     <div className='mailButton'></div>
                     <div className='instaButton'></div>
-                    <div className='youtubeButton'></div>
+                    <div className='tiktokButton'></div>
                 </div>
             </div>
             <PageWrapper snapScroll>
@@ -352,7 +352,7 @@ export default function MainPage(){
                                         <div className='librairieItem'>
                                             <div className="tome1"></div>
                                             <div className='itemSeparator'></div>
-                                            <p>
+                                            <p className='libraryFont'>
                                                 Kali-Jane - tome 1
                                                 <br/>
                                                 Allèlie de la fugue

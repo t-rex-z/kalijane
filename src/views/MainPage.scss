@@ -34,7 +34,7 @@
 
 .precoBlock{
     position: relative;
-    background-image: url("assets/images/preco.png");
+    background-image: url("assets/images/preco-before.png");
     background-size: cover;
     width: 25vw;
     height: 60vh;
@@ -43,11 +43,11 @@
    
     cursor: pointer;
 }
-
+/*
 .precoBlock:hover{
     background-image: url("assets/images/preco2.png");
 }
-
+*/
 .testBottom{
     position: absolute;
     bottom: 10vh;
@@ -252,6 +252,20 @@ height: 2vh;
 
 .youtubeButton:hover{
   background-image: url("assets/images/youtube2.png");
+}
+
+.tiktokButton{
+  cursor: pointer;
+  background-image: url("assets/images/tiktok.png");
+  width: 4vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.tiktokButton:hover{
+  background-image: url("assets/images/tiktok2.png");
 }
 
 .instaButton{
