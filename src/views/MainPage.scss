@@ -526,10 +526,14 @@ height: 65%;
   background-image: url("assets/images/librairie/bandeau-bas.png");
 }
 
+.preco{
+  cursor: pointer;
+}
+
 .precoBig{
   float: left;
   bottom: 0;
-  right: 0;
+  right: 11vh;
   position: absolute;
   font-size: 9vh;
   color: #c5fe01;
@@ -537,4 +541,34 @@ height: 65%;
   font-family: 'HelveticaBlk';
   padding: 0;
   margin: 0;
+}
+
+.precoArrow{
+  float: left;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 9999999;
+  background-repeat: no-repeat;
+  background-image: url("assets/images/librairie/arrow-right-hover.png");
+  height: 9vh;
+  width: 9vh;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+}
+
+.precoArrowHover{
+  float: left;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 9999999;
+  background-repeat: no-repeat;
+  background-image: url("assets/images/librairie/arrow-right.png");
+  height: 9vh;
+  width: 9vh;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
 }

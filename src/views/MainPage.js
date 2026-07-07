@@ -10,6 +10,8 @@ export default function MainPage(){
     const [words, setWords] = useState([]);
     const [currentPage, setCurrentPage] = useState("home");
 
+    const [onLibraryPrecoEnter, setOnLibraryPrecoEnter] = useState(false);
+
     const UniversBlockRef = useRef(null);
     const CouvScrollRef = useRef(null);
     const ExtraitsScrollRef = useRef(null);
@@ -361,8 +363,20 @@ export default function MainPage(){
                                     </div>
                                   
                                 </div>
-                                <div className='precoBig'>
-                                    <span>PRECOMMANDES</span>
+                                <div 
+                                className='preco'
+                                onMouseEnter={()=>{
+                                    setOnLibraryPrecoEnter(true);
+                                }}
+                                onMouseLeave={()=>{
+                                    setOnLibraryPrecoEnter(false);
+                                }}
+                                >
+                                    <div className='precoBig'>
+                                        <span>PRECOMMANDES</span>
+                                        
+                                    </div>
+                                    <div id='precoArrow' className={'precoArrow' + (onLibraryPrecoEnter ? "Hover" : "")}></div>
                                 </div>
                             </div>
                             
