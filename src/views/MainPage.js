@@ -256,7 +256,7 @@ export default function MainPage(){
                                 Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur.
                                 <br/>
                                 <br/>
-                                Elle voyage dans une roulotte avec son papāye, le boucher de la tribu. Ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
+                                Elle voyage dans une roulotte avec son papāye, le boucher de la tribu. Ensemble, et génération après génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
                                 <br/>
                                 <br/>
                                 Aujourd’hui, les deux nomades ont pris du retard sur le reste de la caravane ; c’est la nuit et Kali-Jane ne dort pas. Elle fugue.
@@ -271,7 +271,7 @@ export default function MainPage(){
                                 Enceinte comme les femmes de jadis.
                                 <br/>
                                 <br/>
-                                Alors, si l’automne tropical les asphyxie, si les lianes entrelacent des barricades et les ronces électrocutent ; non, Kali-Jane n’aura pas le choix, il faudra qu’elle la déclare, à l’encre vivant de son crachat, sa guerre contre la nature.
+                                Alors, si l’automne tropical les asphyxie, si les lianes entrelacent des barricades et les ronces électrocutent, non, Kali-Jane n’aura pas le choix, il faudra qu’elle la déclare, à l’encre vivant de son crachat, sa guerre contre la nature.
                         </p>
                         </div>
                     </div>
