@@ -1,0 +1,188 @@
+.mMenuButton{
+    position: fixed;
+    color: #d45a5a;
+    width: 50px;
+    height: 50px;
+    z-index: 999999;
+    left: 10px;
+    top: 10px;
+    font-size: 2.3vh;
+}
+
+#mMenu{
+    position: fixed;
+    z-index: 999999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(8, 8, 8);
+    opacity: 0.9;
+}
+
+.mCloseButton{
+font-size: 4.3vh;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.mMenuButtons{
+    position: absolute;
+    top: 10%;
+    left: 50px;
+}
+
+
+.mMailButton{
+  cursor: pointer;
+  background-image: url("assets/images/mail.png");
+  width: 11vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mYoutubeButton{
+  cursor: pointer;
+  background-image: url("assets/images/youtube.png");
+  width: 11vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mTiktokButton{
+  cursor: pointer;
+  background-image: url("assets/images/tiktok.png");
+  width: 11vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mInstaButton{
+  cursor: pointer;
+  background-image: url("assets/images/insta.png");
+  width: 11vw;
+  height: 4vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mCouvButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu 4decouv.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mCouvButtonSelected{
+  cursor: pointer;
+  background-image: url("assets/images/menu 4decouv2.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mExtraitButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu extrait.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mExtraitButtonSelected{
+  cursor: pointer;
+  background-image: url("assets/images/menu extrait2.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+
+.mLibrairieButton{
+  cursor: pointer;
+  background-image: url("assets/images/menu librairie.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mLibrairieButtonSelected{
+  cursor: pointer;
+  background-image: url("assets/images/menu librairie2.png");
+  width: 30vw;
+  height: 9vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mHomeBlock{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/images/mobile/fond1.png");
+    background-size: contain;
+    background-color: rgb(8, 8, 8);
+    background-repeat: no-repeat;
+    background-position-y: 15vh;
+}
+
+.mPrecoButton{
+    background-image: url("assets/images/mobile/preco octobre.png");
+    background-size: cover;
+    width: 300px;
+    height: 52px;
+    background-repeat: no-repeat;
+    margin-right: 50%;
+    position: relative;
+    margin-left: auto;
+    top: 80vh;
+    margin-right: auto;
+}
+
+.mUniversBlock{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/images/UNIVERS FOND.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mUniversBlock p{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 2.2vh;
+    margin-top: 50px;
+}
+
+.mExtraitBlock{
+    width: 100vw;
+    height: 100vh;
+    background-color: #18160d;
+}
+
+.mLibrairieBlock{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}

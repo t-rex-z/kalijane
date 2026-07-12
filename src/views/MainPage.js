@@ -7,6 +7,7 @@ import { useInView, useOnInView } from 'react-intersection-observer';
 
 
 export default function MainPage(){
+
     const [words, setWords] = useState([]);
     const [currentPage, setCurrentPage] = useState("home");
 
