@@ -25,6 +25,17 @@ export default function MobilePage(){
     const [showMenu, setShowMenu] = useState(false);
     const [currentPage, setCurrentPage] = useState("home");
 
+    const extraits = [
+        "./assets/images/extraits/page1.jpg",
+        "./assets/images/extraits/page2.jpg",
+        "./assets/images/extraits/page3.jpg",
+        "./assets/images/extraits/page4.jpg",
+        "./assets/images/extraits/page5.jpg",
+        "./assets/images/extraits/page6.jpg",
+        "./assets/images/extraits/page7.jpg",
+        "./assets/images/extraits/page8.jpg"
+    ]
+
     const UniversBlockRef = useRef(null);
     const CouvScrollRef = useRef(null);
     const ExtraitsScrollRef = useRef(null);
@@ -140,8 +151,21 @@ export default function MobilePage(){
             </PageBlock>
             <PageBlock ref={ExtraitsScrollRef}>
                 <div className='mExtraitBlock' ref={CbExtraitsBlockTrackingRef}>
-                    <div>
-                        
+                    <div className='mExtraitGallery'>
+                        {extraits.map((url, index)=> {
+                            return (
+                                <img 
+                                    src={url}
+                                    style={{
+                                        position : (index == 0 ?"relative" : "absolute"),
+                                        top: 0,
+                                        left: (index * 100) + "%",
+                                        float: "left"
+                                    }
+                                    }
+                                ></img>
+                             )
+                        })}
                     </div>
                 </div>
             </PageBlock>
