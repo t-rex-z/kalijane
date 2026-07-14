@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import withRouter from '../withRouter';
 import { PageBlock, PageWrapper, Container, PageHeader } from 'react-pageloom';
-import { FaBars, FaCross } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaArrowCircleRight, FaBars, FaCross } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import "./MobilePage.scss";
 import { useInView, useOnInView } from 'react-intersection-observer';
@@ -24,6 +24,7 @@ const images = [
 export default function MobilePage(){
     const [showMenu, setShowMenu] = useState(false);
     const [currentPage, setCurrentPage] = useState("home");
+    const [extraitsArrowPosition, setExtraitsArrowPosition] = useState(null);
 
     const extraits = [
         "./assets/images/extraits/page1.jpg",
@@ -154,7 +155,13 @@ export default function MobilePage(){
                     <div className='mExtraitGallery'>
                         {extraits.map((url, index)=> {
                             return (
+                                <>
+                                
                                 <img 
+                                    onLoad={(event) => {
+                                        console.log("LOADED", event.target.height);
+                                        setExtraitsArrowPosition({width : event.target.width, height : event.target.height})
+                                    }}
                                     src={url}
                                     style={{
                                         position : (index == 0 ?"relative" : "absolute"),
@@ -164,6 +171,21 @@ export default function MobilePage(){
                                     }
                                     }
                                 ></img>
+                                {index == 0 && extraitsArrowPosition != null && 
+                                    <div style={{
+                                        zIndex: 999999999999,
+                                        position: "absolute",
+                                        left : (extraitsArrowPosition.width - 50) + "px",
+                                        top : (extraitsArrowPosition.height - 50) + "px",
+
+                                        width: "50px",
+                                        height: "50px",
+                                        color: "black",
+                                        display: "block",
+                                        fontSize: "xx-large"
+                                    }}><FaArrowCircleRight/></div>
+                                }
+                               </>
                              )
                         })}
                     </div>
