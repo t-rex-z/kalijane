@@ -17,16 +17,33 @@ class App extends Component {
   constructor(){
     super();
 
-    this.state = {
-    };
   }
 
+  async lockToPortrait() {
+    try {
+      // Lock to all portrait modes (primary + secondary)
+      await screen.orientation.lock('portrait'); 
+      console.log('Orientation locked to portrait');
+    } catch (err) {
+      console.error('Failed to lock orientation:', err);
+      // Fallback: Handle unsupported browsers or permission issues
+    }
+  }
 
+  componentDidMount(){
+    if(isMobile()){
+      this.lockToPortrait();
+    }
+  }
 
   render(){
     const basePath = "";
     const onMobile = isMobile();
     console.log("IS MOBILE ?", onMobile);
+    if(onMobile){
+      
+    }
+
     return (
         <HashRouter>
             <div id="app">
