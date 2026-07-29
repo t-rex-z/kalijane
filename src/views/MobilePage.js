@@ -204,7 +204,19 @@ export default function MobilePage(){
                 </PageBlock>
                 <PageBlock ref={LibrairieScrollRef}>
                     <Container>
-                        <div className='mLibrairieBlock' ref={CbLibrairieBlockTrackingRef}></div>
+                        <div className='mLibrairieBlock' ref={CbLibrairieBlockTrackingRef}>
+                            <div className='mLibrairieItem'>
+                                <div className="mTome1">
+                                    <span className='mPrecoBtn'>PRECOMMANDES</span>
+                                </div>
+                                <div className='mItemSeparator'></div>
+                                <p className='libraryFont'>
+                                    Kali-Jane - tome 1
+                                    <br/>
+                                    Allèlie de la fugue
+                                </p>
+                            </div>
+                        </div>
                     </Container>
                 </PageBlock>
             </PageWrapper>

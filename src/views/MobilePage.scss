@@ -229,7 +229,7 @@ margin-top: 10px;
 .mLibrairieBlock{
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #18160d;
 }
 
 
@@ -259,4 +259,47 @@ margin-top: 10px;
    -moz-animation: flickerAnimation 6s infinite;
    -o-animation: flickerAnimation 6s infinite;
     animation: flickerAnimation 6s infinite;
+}
+
+.mLibrairieItem{
+display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 5px;
+  align-items: center;
+  width: 60%;
+  padding-left: 20%;
+  height: inherit;
+}
+
+.mItemSeparator{
+border-bottom: 1.5px dotted #c5fe01;
+width: 30%;
+}
+
+.mTome1{
+  height: 65%;
+  width: 100%;
+  margin-left: 5%;
+  background-image: url("assets/images/librairie/librairie tome 1 mini couv.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+    background-position: bottom;
+    cursor: pointer;
+    transition: .5s;
+  transform: scale(1);
+}
+
+.mTome1:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.mPrecoBtn{
+  bottom: 5px;
+  color: #c80931;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
 }
