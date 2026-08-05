@@ -140,7 +140,7 @@ export default function MobilePage(){
                             Kali-Jane a six ans, amazone ou gitane, elle hésite, c’est une fille du futur.
                             <br/>
                             <br/>
-                            Elle voyage dans une roulotte avec son papāye, le boucher de la tribu. Ensemble, et génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
+                            Elle voyage dans une roulotte avec son papāye, le boucher de la tribu. Ensemble, et génération après génération pour son peuple, ils font le tour de notre planète sauvage et hybride.
                             <br/>
                             <br/>
                             Aujourd’hui, les deux nomades ont pris du retard sur le reste de la caravane ; c’est la nuit et Kali-Jane ne dort pas. Elle fugue.
@@ -207,7 +207,7 @@ export default function MobilePage(){
                         <div className='mLibrairieBlock' ref={CbLibrairieBlockTrackingRef}>
                             <div className='mLibrairieItem'>
                                 <div className="mTome1">
-                                    <span className='mPrecoBtn'>PRECOMMANDES</span>
+                                    
                                 </div>
                                 <div className='mItemSeparator'></div>
                                 <p className='libraryFont'>
