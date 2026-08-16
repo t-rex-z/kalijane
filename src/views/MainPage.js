@@ -228,9 +228,9 @@ export default function MainPage(){
                 </div>
                 <div className='betweenMenus'></div>
                 <div className='extraMenu'>
-                    <div className='mailButton'></div>
-                    <div className='instaButton'></div>
-                    <div className='tiktokButton'></div>
+                    <div className='mailButton' onClick={()=>{window.open('mailto:sebastien.bellanger@kali-jane.fr', '_blank');}}></div>
+                    <div className='instaButton' onClick={()=>{window.open('https://www.instagram.com/twamili/', '_blank');}}></div>
+                    <div className='tiktokButton' onClick={()=>{window.open('https://www.tiktok.com/@twamili', '_blank');}}></div>
                 </div>
             </div>
             <PageWrapper snapScroll>

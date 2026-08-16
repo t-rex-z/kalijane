@@ -309,6 +309,7 @@ export default function MobilePage(){
                 </PageBlock>
                 <PageBlock  ref={CouvScrollRef}>
                     <div className='mUniversBlock'ref={CbUniversBlockTrackingRef}>
+                        <div className='mCouvTitle'></div>
                         <p className='bookFont'>
                             <br/>
                             <br/>
@@ -343,6 +344,7 @@ export default function MobilePage(){
                 </PageBlock>
                 <PageBlock ref={ExtraitsScrollRef}>
                     <div className='mExtraitBlock' ref={CbExtraitsBlockTrackingRef}>
+                        <div className='mExtraitsTitle'></div>
                         <div className='mExtraitGallery'>
                             {extraits.map((url, index)=> {
                                 return (
@@ -402,6 +404,7 @@ export default function MobilePage(){
                 <PageBlock ref={LibrairieScrollRef}>
                     <Container>
                         <div className='mLibrairieBlock' ref={CbLibrairieBlockTrackingRef}>
+                            <div className='mLibrairieTitle'></div>
                             <div className='mLibrairieItem'>
                                 <div className="mTome1">
                                     

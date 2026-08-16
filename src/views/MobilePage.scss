@@ -255,11 +255,12 @@ font-size: 4.3vh;
 }
 
 .mAuthorTitle{
-width: 90%;
-  background-image: url(http://localhost:3004/7a1d6478e3d74fd04f18.png);
+  width: 80vw;
+  background-image: url("assets/images/mobile/auteur_name.png");
   background-size: cover;
   height: 15vh;
   margin-top: 10px;
+  background-repeat: no-repeat;
 }
 
 .mAuthorText{
@@ -341,4 +342,43 @@ width: 30%;
   width: 100%;
   text-align: center;
   font-size: x-large;
+}
+
+.mCouvTitle{
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 5px;
+  background-image: url("assets/images/menu 4decouv.png");
+  width: 25vw;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mExtraitsTitle{
+  position: absolute;
+  margin-left: 40%;
+  margin-right: 50%;
+  top: 5px;
+  background-image: url("assets/images/menu extrait.png");
+  width: 25vw;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
+}
+
+.mLibrairieTitle{
+  position: absolute;
+  margin-left: 40%;
+  margin-right: 50%;
+  top: 5px;
+  background-image: url("assets/images/menu librairie.png");
+  width: 25vw;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2vh;
 }
