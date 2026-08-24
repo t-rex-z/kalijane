@@ -337,6 +337,7 @@ export default function MobilePage(){
                 </PageBlock>
                 <PageBlock  ref={AdnScrollRef}>
                     <div className='mAdnBlock'ref={CbAdnBlockTrackingRef}>
+                        <div className='mAdnTitle'></div>
                         <div className='letters'>
                             {getWords()}
                         </div>
@@ -395,7 +396,7 @@ export default function MobilePage(){
                                     Bonjour à tous ! Je ne vous ai pas dit : à 5 ans, j’adorais jouer de la batterie avec mon bâton et les poubelles de la cour. Cela faisait un boucan de fou ! Je ne sais plus très bien si j’étais super heureux ou super énervé, mais j’ai le souvenir de purs moments artistiques !
                                     <br/>
                                     <br/>
-                                    Pourquoi je vous raconte ça ? Parce que Kali-Jane braille fort et réagit n’importe comment parfois, je sais bien, elle saoule... Mais ne lui en voulez pas, en tout cas pas trop, c’est pas sa faute ! Dès que j’écris son histoire, voilà, j’avoue, ça me rattrape, je sens compulsivement vibrer les poubelles sur les touches de clavier.
+                                    Pourquoi je vous raconte ça ? Parce que Kali-Jane braille fort et réagit n’importe comment parfois, je sais bien, elle saoule... Mais ne lui en voulez pas, en tout cas pas trop, c’est pas sa faute ! Dès que j’écris son histoire, voilà, j’avoue, ça me rattrape, je sens vibrer les poubelles sur les touches de clavier.
                                 </p>
                             </div>
                         </div>
@@ -410,10 +411,12 @@ export default function MobilePage(){
                                     
                                 </div>
                                 <div className='mItemSeparator'></div>
-                                <p className='libraryFont'>
+                                <p className='libraryFont mTextCenter'>
                                     Kali-Jane - tome 1
                                     <br/>
                                     Allèlie de la fugue
+                                    <br/>
+                                    <span className='mLibrarySmaller'>(octobre 2026)</span>
                                 </p>
                             </div>
                         </div>
