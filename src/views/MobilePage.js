@@ -307,6 +307,14 @@ export default function MobilePage(){
                         <div className='mPrecoButton'></div>
                     </div>
                 </PageBlock>
+                <PageBlock  ref={AdnScrollRef}>
+                    <div className='mAdnBlock'ref={CbAdnBlockTrackingRef}>
+                        <div className='mAdnTitle'></div>
+                        <div className='letters'>
+                            {getWords()}
+                        </div>
+                    </div>
+                </PageBlock>
                 <PageBlock  ref={CouvScrollRef}>
                     <div className='mUniversBlock'ref={CbUniversBlockTrackingRef}>
                         <div className='mCouvTitle'></div>
@@ -333,14 +341,6 @@ export default function MobilePage(){
                             <br/>
                             Alors, si l’automne tropical les asphyxie, si les lianes entrelacent des barricades et les ronces électrocutent ; non, Kali-Jane n’aura pas le choix, il faudra qu’elle la déclare, à l’encre vivant de son crachat, sa guerre contre la nature.
                         </p>
-                    </div>
-                </PageBlock>
-                <PageBlock  ref={AdnScrollRef}>
-                    <div className='mAdnBlock'ref={CbAdnBlockTrackingRef}>
-                        <div className='mAdnTitle'></div>
-                        <div className='letters'>
-                            {getWords()}
-                        </div>
                     </div>
                 </PageBlock>
                 <PageBlock ref={ExtraitsScrollRef}>
