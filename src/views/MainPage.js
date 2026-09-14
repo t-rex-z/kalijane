@@ -236,7 +236,9 @@ export default function MainPage(){
             <PageWrapper snapScroll>
                 <PageBlock >
                     <div className="homeBlock" ref={CbHomeBlockTrackingRef}>
-                        <div className='precoBlock'>
+                        <div className='precoBlock' onClick={() => {
+                            window.open("https://fr.ulule.com/kali-jane/preview?token=k1RC9MSijJot7CLj", "_blank");
+                        }}>
 
                         </div>
                     

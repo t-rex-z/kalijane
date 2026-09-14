@@ -304,7 +304,9 @@ export default function MobilePage(){
             <PageWrapper snapScroll>
                 <PageBlock >
                     <div className="mHomeBlock" ref={CbHomeBlockTrackingRef}>
-                        <div className='mPrecoButton'></div>
+                        <div className='mPrecoButton'  onClick={() => {
+                            window.open("https://fr.ulule.com/kali-jane/preview?token=k1RC9MSijJot7CLj", "_blank");
+                        }}></div>
                     </div>
                 </PageBlock>
                 <PageBlock  ref={AdnScrollRef}>
