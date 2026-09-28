@@ -33,21 +33,21 @@
 }
 
 .precoBlock{
-    position: relative;
-    background-image: url("assets/images/preco-before.png");
-    background-size: cover;
-    width: 25vw;
-    height: 60vh;
-    top: 30vh;
-    left: 73vw;
-   
-    cursor: pointer;
+  position: relative;
+  background-image: url("assets/images/fougere lien ulule1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20vw;
+  height: 73vh;
+  top: 24vh;
+  left: 76vw;
+  cursor: pointer;
 }
-/*
+
 .precoBlock:hover{
-    background-image: url("assets/images/preco2.png");
+    background-image: url("assets/images/fougere lien ulule2.png");
 }
-*/
+
 .testBottom{
     position: absolute;
     bottom: 10vh;
