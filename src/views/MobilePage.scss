@@ -192,6 +192,19 @@ font-size: 4.3vh;
     margin-right: auto;
 }
 
+.mPrecoButton:hover{
+    background-image: url("assets/images/mobile/bouton ulule mobile2.png");
+    background-size: contain;
+    width: 120px;
+    height: 100px;
+    background-repeat: no-repeat;
+    margin-right: 50%;
+    position: relative;
+    margin-left: auto;
+    top: 70vh;
+    margin-right: auto;
+}
+
 .mUniversBlock{
     width: 100vw;
     height: 100vh;
