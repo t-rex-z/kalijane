@@ -237,7 +237,7 @@ export default function MainPage(){
                 <PageBlock >
                     <div className="homeBlock" ref={CbHomeBlockTrackingRef}>
                         <div className='precoBlock' onClick={() => {
-                            window.open("https://fr.ulule.com/kali-jane/preview?token=k1RC9MSijJot7CLj", "_blank");
+                            window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
                         }}>
 
                         </div>
@@ -354,7 +354,11 @@ export default function MainPage(){
                                 <div id="librairieBackground">
                                     <div style={{height: '80%', width : Math.trunc(document.documentElement.clientHeight* 35 / 100) + "px"}}></div>
                                     <div className='librairieLivres' style={{height: '80%'}}>
-                                        <div className='librairieItem'>
+                                        <div className='librairieItem' 
+                                        onClick={()=>{
+                                            window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
+                                        }}
+                                        >
                                             <div className="tome1"></div>
                                             <div className='itemSeparator'></div>
                                             <p className='libraryFont'>
@@ -368,6 +372,9 @@ export default function MainPage(){
                                 </div>
                                 <div 
                                 className='preco'
+                                onClick={()=>{
+                                    window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
+                                }}
                                 onMouseEnter={()=>{
                                     setOnLibraryPrecoEnter(true);
                                 }}

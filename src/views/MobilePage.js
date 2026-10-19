@@ -282,7 +282,9 @@ export default function MobilePage(){
             </div>
 
 
-            <div className='mShopButton'>
+            <div className='mShopButton'  onClick={() => {
+                            window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
+                        }}>
                 <TbShoppingCartShare />
             </div>
 
@@ -305,7 +307,7 @@ export default function MobilePage(){
                 <PageBlock >
                     <div className="mHomeBlock" ref={CbHomeBlockTrackingRef}>
                         <div className='mPrecoButton'  onClick={() => {
-                            window.open("https://fr.ulule.com/kali-jane/preview?token=k1RC9MSijJot7CLj", "_blank");
+                            window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
                         }}></div>
                     </div>
                 </PageBlock>
@@ -408,7 +410,11 @@ export default function MobilePage(){
                     <Container>
                         <div className='mLibrairieBlock' ref={CbLibrairieBlockTrackingRef}>
                             <div className='mLibrairieTitle'></div>
-                            <div className='mLibrairieItem'>
+                            <div className='mLibrairieItem' 
+                             onClick={() => {
+                            window.open("https://fr.ulule.com/kali-jane/?utm_campaign=presale_236082&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_6810322", "_blank");
+                        }}
+                            >
                                 <div className="mTome1">
                                     
                                 </div>
